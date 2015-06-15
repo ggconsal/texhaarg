@@ -1,0 +1,157 @@
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<div id="div-blog" >
+
+	<div class="section section-breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 post-title0">
+					<h2><%= @post_subtit01a %><span><%= @post_subtit01s %></span><%= @post_subtit01b %></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Posts List -->
+	<div class="section blog-posts-wrapper">
+		<div class="container">
+			<div class="col-lg-3 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 sin-padd-r">
+				<div class="blog-post">
+					<div class="post-title">
+						<h3>Titulos</h3>
+					</div>
+					<div class="post-title">
+						<ul class="list-group categorias">
+						  <li class="list-group-item active">
+						    <span class="badge"><%= @post_badge %></span>
+							<%= link_to "Temas Relacionados", "#tit00", class: "mov-suave-post", style: "color: white;" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  @post_subtit02a, "#tit01", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  @post_subtit03a, "#tit02", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  @post_subtit04a, "#tit03", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  @post_subtit05a, "#tit04", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  'Conclusión Final', "#tit05", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <%= link_to  'Links', "#tit04", class: "mov-suave-post" %>
+						  </li>
+						</ul>
+					</div>
+				</div>
+				<div class="blog-post">
+					<div class="post-title">
+						<h3>Nuestras Soluciones</h3>
+					</div>
+					<div class="post-title">
+						<ul class="list-group categorias">
+						  <li class="list-group-item list-group-item-info">
+				              <%= link_to "Aumente sus Ventas", {:action => "index", :controller => "contacts", :anchor => "pp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+				              <%= link_to "Reduzca los Costos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+				              <%= link_to "Unifique su Informacion de Ventas-Inventario-Gastos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item active">
+					        <%= link_to 'Contactarse con Nosotros', new_contact_path(:motivo => "Blog - Tienda"), remote: true, style: "color: white;" %>
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Post -->
+			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 sin-padd-r">
+				<div class="blog-post">
+					<%= link_to image_tag(@post_imagen01, class: "img-responsive post-image2"), new_contact_path(:motivo => "Blog - Post - Imagenes"), remote: true %>
+
+					<%= render "post_texto" %>
+
+					<div class="post-summary"> 	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-10">
+				<div class="blog-post">
+					<div class="post-title">
+						<h3>Categorias</h3>
+					</div>
+					<div class="post-title">
+						<div class="categorias">
+							<button class="btn btn-primary" type="button">
+							  Ventas <span class="badge">2</span>
+							</button>
+						</div>
+						<div class="categorias">
+							<button class="btn btn-primary" type="button">
+							  Imagenes <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias">
+							<button class="btn btn-primary" type="button">
+							  Productos <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias">
+							<button class="btn btn-primary" type="button">
+							  Indicadores <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias">
+							<button class="btn btn-primary" type="button">
+							  Preguntas Frecuentes <span class="badge">1</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+				<div class="blog-post">
+					<div class="post-title">
+						<h3>Categorias</h3>
+					</div>
+					<div class="post-title">
+						<ul class="list-group categorias">
+						  <li class="list-group-item list-group-item-info">
+						    <span class="badge">02</span>
+						    Ventas
+						  </li>
+						  <li class="list-group-item active">
+						    <span class="badge">01</span>
+						    Imagenes
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <span class="badge">01</span>
+						    Productos
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <span class="badge">01</span>
+						    Indicadores
+						  </li>
+						  <li class="list-group-item list-group-item-info">
+						    <span class="badge">01</span>
+						    Preguntas Frecuentes
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+-->

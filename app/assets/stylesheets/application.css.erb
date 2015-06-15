@@ -1,0 +1,883 @@
+ /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap
+ *= require berry
+ *= require animate
+ *= require font-awesome
+ *= require main
+ *= require_self
+ *= require mediaq-land-width
+ *= require mediaq-land-height
+ *= require mediaq-port-width
+ *= require mediaq-port-height
+ */
+
+body, html, .div-ppal {
+	height: 100%;
+}
+
+/*
+--------------------------------------------------------------------
+---- MENU PRINCIPAL
+--------------------------------------------------------------------
+*/
+
+.navbar {
+	background-color: #fff;
+	opacity: .8;
+	top: 3%;
+	margin-left: 20%;
+	border-radius: 15%;
+	border-color: #bbb;
+	border-bottom-width: 3px;
+	border-right-width: 3px;
+}
+
+
+.navbar-brand {
+	padding: 0px;
+	padding-top: 1%;
+}
+
+.navbar-nav li a {
+	padding-right: 5px;
+	padding-left: 10px;
+}
+
+.marca {
+	position: absolute;
+	top: 0%;
+	left: 2%;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    text-shadow: 6px 0px 6px #FF0, -6px 0px 6px #FFFF33;
+	font-weight: bold;
+/*    color: #fff;
+    background-color: #777;
+	border-radius: 25%; */
+}
+
+.redes-soc {
+	padding-left: 0px;
+	position: absolute;
+	z-index: 200;
+}
+
+.affix {
+	width: 6%;
+	max-width: 50px;
+	min-width: 35px;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- IMAGEN DE FONDO
+--------------------------------------------------------------------
+*/
+
+.div-img {
+	height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.img-ppal {
+	margin: 0px;
+	width: 100%;
+	left: 0px;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- CAROUSEL
+--------------------------------------------------------------------
+*/
+
+.carousel, .carousel-inner, .item  {
+	height: 100%;
+}
+
+.carousel-ppal {
+	position: absolute;
+	overflow: hidden;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- CAROUSEL CAPTION
+--------------------------------------------------------------------
+*/
+
+.carousel-caption {
+	position: static;
+	background-color: transparent;
+	color: #07145C;
+	border-radius: 20%;
+}
+
+.carousel-caption h1 {
+/*    font-size: 2.5em; */
+	color: #0A79B6;
+}
+
+.carousel-caption h1 span {
+/*    font-size: 1.4em; */
+	color: #086496; /* 0A79B6; FFB826; */
+/*	text-shadow: 6px -4px 6px #ddd; */
+    text-shadow: 3px -4px 4px #ddd, -1px 4px 4px #ddd;
+	font-weight: bold;
+}
+
+.carousel-caption h3 {
+/*    font-size: 1.4em; */
+	color: #8BD6FF;
+	margin-bottom: 3%;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- CAROUSEL BOTONES
+--------------------------------------------------------------------
+*/
+
+.btn-idx {
+	position: absolute;
+	bottom: 20%;
+	padding: 3px 0px 3px 0px;
+	z-index: 50;
+}
+
+.btn-font {
+	font-weight: bold;
+/*    font-size: 16px; */
+	color: #333;
+	background-color: #E7B54E;
+	text-align: center;
+	border-radius: 15%;
+}
+
+.btn-font1 {
+	font-weight: bold;
+/*    font-size: 16px; */
+	color: #333;
+	background-color: #E7B54E;
+	text-align: center;
+	border-radius: 15%;
+}
+
+.btn-idx:hover {
+	text-decoration: none;
+	background-color: transparent;
+	border-color: #81CB6A;
+	border-width: 1px;
+	color: #fff;
+}
+
+.btn-idx:focus {
+	text-decoration: none;
+	color: #000;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- CAROUSEL CONTROL
+--------------------------------------------------------------------
+*/
+
+.carousel-control {
+	color: #fff;
+/*    font-size: 2em; */
+    width: 25%;
+    z-index: 30;
+}
+
+.carousel-control.right {
+	right: 0%;
+    background-image: none;
+}
+
+.carousel-control.left {
+	left: 0%;
+    background-image: none;
+}
+
+.carousel-control:hover /*,
+.carousel-control:focus */ {
+    text-shadow: 6px 0px 2px #FF0, -6px 0px 2px #FFFF33;
+	color: #333;
+ 	text-decoration: none;
+ 	opacity: .9;
+}
+ 
+.carousel-control:focus {
+	color: #333;
+ 	text-decoration: none;
+ 	opacity: .9;
+}
+ 
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-hand-right  {
+	position: absolute;
+    top: 32%;
+    right: 3%;
+}
+
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-hand-left  {
+	position: absolute;
+    top: 32%;
+    left: 3%;
+}
+
+/* HOME
+--------------------------------------------------------------------
+---- CAROUSEL INDICATORS
+--------------------------------------------------------------------
+*/
+
+.carousel-indicators li {
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #bbb;
+	border-radius: 25%;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.carousel-indicators .active {
+	background-color: #bbb;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* HOME - VENTAS y COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL
+--------------------------------------------------------------------
+*/
+
+.img-ppal-vtas-ctos {
+	position: absolute;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	opacity: .15;
+}
+
+.carousel-ppal2 {
+	position: absolute;
+	margin: 0px;
+	overflow: hidden;
+	border-radius: 0% 20%;
+}
+
+/* HOME - VENTAS
+--------------------------------------------------------------------
+---- CAROUSEL IMAGENES
+--------------------------------------------------------------------
+*/
+
+
+/* HOME - VENTAS y COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL CAPTION
+--------------------------------------------------------------------
+*/
+
+.carousel-caption2 {
+	position: absolute;
+	background-color: transparent;
+	right: 0;
+	left: 0;
+	height: 55%;
+	color: #555;
+	margin-top: 0;
+	padding: 0;
+	text-align: center;
+	z-index: 1;
+}
+
+.carousel-caption2 h1 {
+    text-shadow: 6px -4px 4px #FFFF33, -6px 4px 4px #FFFF33;
+    z-index: -1;
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+	margin-top: 15px;
+	color: #333;
+}
+
+.carousel-caption2 h3 {
+    padding-left: 1%;
+    padding-right: 1%;
+	color: #222;
+	background-color: #fff;
+	opacity: .7;
+}
+
+.carousel-caption2 h3 span {
+	color: #fff;
+}
+
+/* HOME - VENTAS y COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL BUTTONS
+--------------------------------------------------------------------
+*/
+
+.btn-idx2 {
+	padding: 0.4em 1.2em;
+	position: absolute;
+	z-index: 50;
+}
+
+.btn-idx2:hover {
+	text-decoration: none;
+	background-color: transparent;
+	border-color: #81CB6A;
+	border-width: 1px;
+}
+
+.btn-idx2:focus {
+	text-decoration: none;
+	color: #000;
+}
+
+/* HOME - VENTAS y COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL CONTROL
+--------------------------------------------------------------------
+*/
+
+.caro-cont2 {
+	color: #000;
+	top: 30%;
+}
+
+.caro-cont2:hover /*,
+.carousel-control:focus */ {
+	color: #777;
+ }
+
+/* HOME - VENTAS y COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL INDICATORS
+--------------------------------------------------------------------
+*/
+
+
+/* HOME - COSTOS
+--------------------------------------------------------------------
+---- CAROUSEL IMAGENES
+--------------------------------------------------------------------
+*/
+
+
+/* VENTAS1
+--------------------------------------------------------------------
+---- DIVS
+--------------------------------------------------------------------
+*/
+
+.section-heading {
+    margin: 90px 0px 40px;
+}
+
+
+.section-heading h1 {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.section-heading p {
+	line-height: 35px;
+}
+
+.ventas1 {
+	margin-bottom: 40px;
+}
+
+.ventas1 p {
+	margin-bottom: 20px;
+}
+
+.control-label {
+    font-size: 1.8em;
+}
+
+.btn-idx3 {
+	border-color: #C9A439;
+	color: #C9A439;
+	border-radius: 0.2em;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+.btn-idx3:hover {
+	background-color: #C9A439;
+	color: #fff;
+}
+
+
+.modal-body {
+    padding: 0px 10px;
+}
+
+.modal-header h3 {
+	text-align: center;
+	margin: 0px;
+}
+
+.modal-header-h4 {
+	text-align: center;
+	margin: 10px;
+}
+
+.modal-footer {
+    text-align: left;
+}
+
+.boton-mas, .boton-mas2 {
+    text-align: center;
+    margin: 0px auto;
+    
+}
+
+#gc-aceptar {
+	margin-top: 5px;
+}
+
+#contact_con_nya, #contact_con_mail, #contact_con_telefono, #contact_password, #contact_password_confirmation {
+	padding: 0px 20px;
+	margin-bottom: 10px;
+}
+
+
+/* BLOG
+--------------------------------------------------------------------
+---- DIVS
+--------------------------------------------------------------------
+*/
+
+#div-blog, #quienes {
+  background: url('page-background.png');
+}
+
+.section-breadcrumbs {
+	padding-top: 100px;
+}
+
+
+.section-breadcrumbs .container {
+	margin-left: 8%;
+	width: 93%;
+}
+
+.blog-posts-wrapper {
+	padding-top: 1%;
+}
+
+.blog-posts-wrapper .container {
+/*	margin-left: 5%;
+	width: 100%;
+	margin-right: 10px;*/
+}
+
+.sin-padd-r {
+	padding-right: 5px;
+}
+
+.post-summary p {
+/*	font-size: 0.75em; */
+}
+
+.post-title h3, .post-title h2 {
+/*	font-size: 1.2em; */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.post-title0 h2 {
+	color: white;
+	margin-bottom: 0px;
+}
+
+.post-title h3 span, .post-title h2 span, .post-title0 h2 span {
+    text-shadow: 6px 0px 6px #FF0, -6px 0px 6px #FFFF33;
+}
+
+.post-title0 h2 span {
+	color: rgba(34, 34, 34, 0.8);
+}
+
+.post-image {
+	height: auto;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 4%;
+	border-radius: 4%;
+}
+
+.post-info {
+	margin-left: 6%;
+	margin-top: 20%;
+}
+
+/* POSTS
+--------------------------------------------------------------------
+---- DIVS
+--------------------------------------------------------------------
+*/
+
+.categorias {
+	margin: 10px auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.categorias li {
+	margin-bottom: 5px;
+}
+
+.categorias button {
+	border-radius: 10%;
+	padding: 5px 15px;
+}
+
+.post-image2 {
+	height: auto;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 4%;
+	border-radius: 4%;
+	max-height: 500px;
+}
+
+.post-summary {
+	margin: 40px 10px;
+}
+.post-summary h3, .post-summary h2 {
+/*	font-size: 1.2em; */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.post-summary h3 span, .post-summary h2 span {
+    text-shadow: 6px 0px 6px #FF0, -6px 0px 6px #FFFF33;
+}
+
+.post-summary ul {
+	padding-left: 20px;
+}
+
+
+/* QUIENES SOMOS
+--------------------------------------------------------------------
+---- DIVS
+--------------------------------------------------------------------
+*/
+
+#about {
+	padding-bottom: 0px;
+}
+
+.bs-callout {
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 3px;
+}
+
+/* Tighten up space between multiple callouts */
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+
+/* Variations */
+.bs-callout-orange {
+  border-left-color: #E1AA27;
+}
+.bs-callout-orange h4 {
+  color: #E1AA27;
+}
+.bs-callout-red {
+  border-left-color: #C6352A;
+}
+.bs-callout-red h4 {
+  color: #C6352A;
+}
+.bs-callout-info {
+  border-left-color: #1b809e;
+}
+.bs-callout-info h4 {
+  color: #1b809e;
+}
+
+.bs-callout-green {
+  border-left-color: #2C9E1B;
+}
+.bs-callout-green h4 {
+  color: #2C9E1B;
+}
+
+.transp {
+    background-color: transparent;
+    border: 0px;
+    padding: 10px;
+}
+
+.quienes-image {
+	height: auto;
+	width: 100%;
+	border-radius: 4%;
+}
+
+
+/*
+--------------------------------------------------------------------
+---- MEDIA QUERIES 
+----
+----    >>> PORTRAIT GENERAL <<<
+----
+--------------------------------------------------------------------
+*/
+
+@media (orientation:portrait) {
+	.img-ppal {
+		height: 50%;
+	}
+
+	.img-ppal2 {
+		visibility: visible;
+		height: 50%;
+		opacity: .89;
+		width: 100%;
+/*	    -ms-transform: rotate(180deg);
+	    -webkit-transform: rotate(180deg);
+	    transform: rotate(180deg);	*/
+	}
+
+	.redes-soc {
+		top: 10%;
+	}
+
+	.carousel-ppal2 {
+		left: 2%;
+		right: 2%;
+	}
+
+	.carousel-caption2 {
+		bottom: 1%;
+	}
+
+	.carousel-caption p {
+		margin-top: 5%;
+	}
+
+	.btn-idx, .btn-idx2 {
+		width: 70%;
+		left: 15%;
+	}
+
+	.carousel-indicators2 {
+		left: 50%;
+	}
+
+	.img_vta1, .img_vta2, .img_vta3, .img_vta4, .img_vta5, .img_vta6 {
+		margin: 0px auto;
+		margin-top: 16%;
+		width: 100%;
+	}
+
+	.carousel-indicators {
+		bottom: 5%;
+	}
+}
+
+/*
+--------------------------------------------------------------------
+---- MEDIA QUERIES
+----
+----    >>> LANDSCAPE GENERAL <<<
+----
+--------------------------------------------------------------------
+*/
+
+@media (orientation:landscape) {
+	.img-ppal {
+		height: 100%;
+	}
+
+	.img-ppal2 {
+		visibility: hidden;
+	}
+
+	.redes-soc {
+		top: 6%;
+	}
+
+	.carousel-ppal2 {
+		left: 15%;
+		right: 15%;
+	}
+
+	.btn-idx2 {
+		width: 50%;
+		right: 7%;
+		bottom: 7%;
+	}
+
+	.carousel-indicators2 {
+		left: 30%;
+	}
+
+	.img_vta1, .img_vta2, .img_vta3, .img_vta4, .img_vta5, .img_vta6 {
+		margin: 0px auto;
+		margin-top: 2%;
+	}
+
+	.img_vta1, .img_vta5 {
+		width: 95%;
+	}
+
+	.img_vta2 {
+		width: 90%;
+	}
+
+	.img_vta3, .img_vta4, .img_vta6 {
+		width: 99%;
+	}
+
+}
+
+/*
+--------------------------------------------------------------------
+---- MEDIA QUERIES
+----
+----    >>> GENERAL <<<
+----
+----    WIDTH
+----
+--------------------------------------------------------------------
+*/
+
+@media (min-width: 5px) {
+	.navbar-brand > img {
+	    display: none;
+	}
+
+	.navbar {
+	    font-size: 10px;
+	}
+}
+
+@media (min-width: 260px) {
+	.navbar-brand > img {
+		border-radius: 15%;
+		display: block;
+	    margin-left: 0%;
+	}
+
+	.navbar {
+	    font-size: 13px;
+	}
+}
+
+@media (min-width: 300px) {
+	.navbar-brand > img {
+		display: block;
+	    margin-left: 8%;
+	}
+
+	.navbar {
+	    font-size: 14px;
+	}
+}
+
+@media (min-width: 400px) {
+	.navbar-brand > img {
+	    display: block;
+	    margin-left: 18%;
+	}
+
+	.navbar {
+	    font-size: 16px;
+	}
+}
+
+@media (min-width: 650px) {
+	.post-image {
+	    max-height: 150px;
+	}
+}
+
+@media (min-width: 800px) {
+	.post-image {
+	    max-height: 190px;
+	}
+}
+
+@media (min-width: 900px) {
+	.post-image {
+	    max-height: 220px;
+	}
+
+	.navbar {
+	    font-size: 17px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.post-image {
+	    max-height: 260px;
+	}
+
+	.navbar {
+	    font-size: 18px;
+	}
+}
+
+@media (min-width: 1100px) {
+	.post-image {
+	    max-height: 280px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.post-image {
+	    max-height: 320px;
+	}
+}
+
+@media (min-width: 1500px) {
+	.post-image {
+	    max-height: 400px;
+	}
+}
+
+@media (min-width: 1900px) {
+	.post-image {
+	    max-height: 500px;
+	}
+}
+

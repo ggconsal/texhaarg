@@ -1,0 +1,167 @@
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div-img", id="pp0" >
+  <%= image_tag "maina.jpg", class: "img-responsive img-ppal"%>
+  <%= image_tag "mainb.jpg", class: "img-responsive img-ppal2"%>
+</div>
+
+<div class="carousel-ppal col-xs-12 col-sm-12 col-md-12 col-lg-12", id="pp1" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- data-ride="carousel" -->
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active">
+      </li>
+      <li data-target="#myCarousel" data-slide-to="1">
+      </li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <div class="carousel-caption">
+          <h1>Aumente sus <span>Ventas</span></h1>
+          <h3>Productos flexibles, de Alta Calidad<br/>y Rapidos de implementar!!</h3>
+          <%= link_to  'Ver mas...', "#pp", :class=>"btn-idx btn-font mov-suave btn-lg" %>
+      </div>
+      </div>
+      <div class="item">
+        <div class="carousel-caption">
+          <h1>Reduzca los <span>Costos</span></h1>
+          <h3>Examine sus Costos<br/>con formulas de Ingenieria.</h3>
+          <%= link_to  'Ver mas...',"#ppp", :class=>"btn-idx btn-font mov-suave btn-lg" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-hand-left" aria-hidden="true">
+      </span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-hand-right" aria-hidden="true">
+      </span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div> <!-- <div class="carousel-ppal"> -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div-img", id="pp" >
+  <%= image_tag "Textura-ventas.jpg", class: "img-responsive img-ppal-vtas-ctos"%>
+  <div id="myCarousel2" class="carousel slide carousel-ppal2"> <!-- data-ride="carousel" -->
+    <!-- Indicators -->
+    <ol class="carousel-indicators carousel-indicators2">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active">
+      </li>
+      <li data-target="#myCarousel2" data-slide-to="1">
+      </li>
+      <li data-target="#myCarousel2" data-slide-to="2">
+      </li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= link_to 'Expliquenme mas', contacts_ventas1_path, :class=>"btn-idx2 btn-font1 btn-lg" %>
+        <%= image_tag "diseño.png", class: "img_vta1"  %>
+        <div class="carousel-caption2">
+          <h1>Su WEB en 72hs</h1>
+          <h3> Sea mas conocido en su zona<br/>
+              Diseños de alta calidad (tambien Tablet y Celular)
+          </h3>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to 'Expliquenme mas', contacts_ventas2_path, :class=>"btn-idx2 btn-font1 btn-lg" %>
+<!--        <%= link_to 'Quiero Charlar!', new_contact_path, :class=>"btn btn-success btn-md btn-idx2" %> -->
+        <%= image_tag "camara-900x550.png", class: "img_vta2"  %>
+        <div class="carousel-caption2">
+          <h1>Control Visual 360º</h1>
+          <h3>Observe sus Locales y Empleados.<br/>
+             desde su PC, Tablet o Celular.</h3>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to 'Tomemos un Cafe', new_contact_path(:motivo => "txaVentas - Cafe"), remote: true, class: "btn-idx2 btn-font1 btn-lg" %>
+        <%= image_tag "relax-900x550.jpg", class: "img_vta3"  %>
+        <div class="carousel-caption2">
+          <h1>Mejore la </span>Rentabilidad</span> <br/> de su Negocio</h1>
+          <h3>...y Relajese!</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control caro-cont2" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-hand-left" aria-hidden="true">
+      </span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control caro-cont2" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-hand-right" aria-hidden="true">
+      </span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div-img", id="ppp" >
+  <%= image_tag "Textura-costos.jpg", class: "img-responsive img-ppal-vtas-ctos"%>
+  <div id="myCarousel3" class="carousel slide carousel-ppal2" > <!-- data-ride="carousel" -->
+    <!-- Indicators -->
+    <ol class="carousel-indicators carousel-indicators2">
+      <li data-target="#myCarousel3" data-slide-to="0" class="active">
+      </li>
+      <li data-target="#myCarousel3" data-slide-to="1">
+      </li>
+      <li data-target="#myCarousel3" data-slide-to="2">
+      </li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= link_to 'Expliquenme mas', new_contact_path(:motivo => "txaCostos - reduccion"), remote: true, :class=>"btn-idx2 btn-font1 btn-lg" %>
+        <%= image_tag "costosgastos.jpg", class: "img_vta4"  %>
+        <div class="carousel-caption2">
+          <h1>No pierda mas dinero!</h1>
+          <h3>Organice sus Costos.<br/>
+              Nuestros Ingenieros lo ayudaran.
+          </h3>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to 'Expliquenme mas', new_contact_path(:motivo => "txaCostos - unificada"), remote: true, :class=>"btn-idx2 btn-font1 btn-lg" %>
+        <%= image_tag "reporte889x571.png", class: "img_vta5"  %>
+        <div class="carousel-caption2">
+          <h1>Simplifique los<br/>Números de su Negocio</h1>
+          <h3>Inventario, Ventas y Costos en 1 solo reporte!
+          </h3>
+        </div>
+      </div>
+      <div class="item">
+        <%= link_to 'Tomemos un Cafe', new_contact_path(:motivo => "txaCostos - cafe"), remote: true, class: "btn-idx2 btn-font1 btn-lg" %>
+        <%= image_tag "relax-900x550.jpg", class: "img_vta6"  %>
+        <div class="carousel-caption2">
+          <h1>Mejore la </span>Rentabilidad</span> <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;de su Negocio</h1>
+          <h3>...y Relajese!</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control caro-cont2" href="#myCarousel3" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-hand-left" aria-hidden="true">
+      </span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control caro-cont2" href="#myCarousel3" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-hand-right" aria-hidden="true">
+      </span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+

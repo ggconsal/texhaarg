@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html, charset=UTF-8" http-equiv='Content-Type' />
+</head>
+<body>
+
+<h3>Bienvenido <%= @contact.con_mail %></h3>
+
+<h4>¡Se ha registrado exitosamente, Solo queda un simple paso!</h4>
+
+
+<p>Podra ingresar con su email y la clave "<%= @contact.password %>", Presionando en el link de abajo ...<br/></p>
+
+
+<p><%= link_to 'Presiona Aquí para confirmar su mail', "#" %></p>
+
+
+<p>... y así acceder a toda la información sin restricciones.</p>
+
+
+
+<p><br/><br/> Equipo de Seguridad. Texha Argentina</p>
+
+
+</body>
+</html>
+
+

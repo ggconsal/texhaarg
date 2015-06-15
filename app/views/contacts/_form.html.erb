@@ -1,0 +1,163 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for(@contact, remote: true) do |f| %>
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+<!--
+-->
+        <% if @contact.con_boton_sitio.include? "Blog" %>
+          <h3>¿Quieres mejorar tu Negocio?</h3>
+
+        <% elsif @contact.con_boton_sitio.include? "txaShop" %>
+          <h3>¿Quieres aumentar tus Ventas?</h3>
+          <% elsif @contact.con_boton_sitio.include? "txaVentas" %>
+            <h3>¿Quieres aumentar tus Ventas?</h3>
+            <% elsif @contact.con_boton_sitio.include? "txaVision" %>
+              <h3>¿Quieres aumentar tus Ventas?</h3>
+
+        <% elsif @contact.con_boton_sitio.include? "txaCostos" %>
+          <h3>¿Quieres reducir los Costos?</h3>
+
+        <% elsif @contact.con_boton_sitio.include? "menu" %>
+          <h3>¿Quieres comunicarte con nosotros?</h3>
+
+        <% end %>
+
+      </div>
+
+      <div id="div-modal-body" class="modal-body">
+
+        <ul class="errors"></ul>
+
+        <h4 class="modal-header-h4">¡Anótate Gratis y te enviaremos<br/>Información útil para tu Pyme!</h4>
+        <% @clave = Time.now.year.to_s + Time.now.month.to_s + rand(10000..99999).to_s %>
+        <div class="row">
+          <div class="field col-xs-12 col-sm-12 col-md-12">
+            <%= f.text_field :con_nya, required: true, :placeholder => "Ingrese su Nombre...", :class=>"form-control" %>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.email_field :con_mail, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
+        </div>
+        <div class="field hide">
+          <%= f.text_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+        </div>
+        <div class="field hide">
+          <%= f.text_field :password_confirmation, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+        </div>
+        <div class="field hide">
+          <%= f.text_area :con_boton_sitio, :class=>"form-control" %>
+        </div>
+      </div>
+
+      <% if @contact.con_boton_sitio.include? "txaShop" %>
+        <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+        <% elsif @contact.con_boton_sitio.include? "txaVentas" %>
+          <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+          <% elsif @contact.con_boton_sitio.include? "txaVision" %>
+            <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+            <% elsif @contact.con_boton_sitio.include? "txaCostos" %>
+              <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+              <% elsif @contact.con_boton_sitio.include? "menu" %>
+                <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+      <% end %>
+
+      <div id="msgOK">
+      </div>
+
+      <div class="modal-footer">
+        <div class="col-xs-6 col-sm-7 col-md-7 col-lg-7">
+          <%= image_tag("texhablanco100x40.jpg") %>
+        </div>
+        <div id="divMeAnoto" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+          <%= f.submit '¡Me Anoto!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+<!-- 
+        <%= link_to "Cancelar", "#", class: "btn btn-outline-inverse btn-md btn-idx3", data: {dismiss: "modal"} %>
+
+
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :con_nya %><br>
+    <%= f.text_field :con_nya %>
+  </div>
+  <div class="field">
+    <%= f.label :con_nombre %><br>
+    <%= f.text_field :con_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :con_apellido %><br>
+    <%= f.text_field :con_apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_id %><br>
+    <%= f.text_field :profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :con_telefono %><br>
+    <%= f.text_field :con_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :con_obs %><br>
+    <%= f.text_area :con_obs %>
+  </div>
+  <div class="field">
+    <%= f.label :con_boton_sitio %><br>
+    <%= f.text_field :con_boton_sitio %>
+  </div>
+  <div class="field">
+    <%= f.label :con_telefono_sn %><br>
+    <%= f.check_box :con_telefono_sn %>
+  </div>
+  <div class="field">
+    <%= f.label :con_mail %><br>
+    <%= f.text_field :con_mail %>
+  </div>
+  <div id="form-new" class="form-group has-success has-feedback">
+    <%= f.label "Desea Suscribirse al newsleter?" %>
+    <%= f.check_box :con_suscribir, :id=>"campo-checkbox", :class=>"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :con_confirmado %><br>
+    <%= f.check_box :con_confirmado %>
+  </div>
+  <div class="field">
+    <%= f.label :option_id %><br>
+    <%= f.text_field :option_id %>
+  </div>
+  <div class="field">
+    <%= f.label :canalingreso_id %><br>
+    <%= f.text_field :canalingreso_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+<% end %>
+
+-->
+

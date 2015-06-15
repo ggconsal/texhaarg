@@ -1,0 +1,283 @@
+<% provide(:title, "Blog |") %>
+
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<div id="div-blog" >
+
+	<div class="section section-breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 post-title0">
+					<h2>Blog: Consejos y Preguntas Frecuentes</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Posts List -->
+	<div class="section blog-posts-wrapper">
+		<div class="container">
+			<div class="row sin-padd-r">
+				<!-- Post -->
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<div class="post-title">
+							<h3><span>Ventas</span>: Como transmitir<br/>confianza al comprador</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">26 ABR, 2015</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>57
+							</div>
+						</div>
+				        <%= link_to image_tag("trans-conf.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - transmitir"), remote: true %>
+						<div class="post-summary">
+							<p>Incluimos recomendaciones útiles sobre uno de los temas más importantes en el comercio electrónico: ¿Como Generar en los compradores confianza sobre tu sitio, para que realicen la primera venta? A diferencia de un comercio tradicional ...</p>
+						</div>
+						<div class="post-more">
+							<%= render :partial => 'post01', :locals => {:btn_nombre => "Seguir Leyendo...", :lnk_style => "btn btn-small"} %>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<div class="post-title">
+							<h3><span>Imágenes</span>: Como<br/>prepararlas para la Web</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">30 MAR, 2015</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>16
+							</div>
+						</div>
+				        <%= link_to image_tag("images2.png", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - imagenes"), remote: true %>
+						<div class="post-summary">
+							<p>El objetivo de mejorar las imágenes, no sólo es para que el sitio sea más ágil (cargue más rápido), sino que visualmente se vea ordenado y prolijo. Te mostramos herramientas y tecnicas para aprovechar al maximo ...</p>
+						</div>
+						<div class="post-more">
+							<%= render :partial => 'post02', :locals => {:btn_nombre => "Seguir Leyendo...", :lnk_style => "btn btn-small"} %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row sin-padd-r">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<!-- Post Info -->
+						<div class="post-title">
+							<h3>¿Mi negocio Necesita una <br/><span>Tienda Online</span>?</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">30 JAN, 2015</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>11
+							</div>
+						</div>
+				        <%= link_to image_tag("tienda.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - Tienda"), remote: true %>
+						<div class="post-summary">
+							<p>Tener una tienda online para vender tus productos a través de internet se está convirtiendo en una manera de hacer crecer tu negocio.  Te resumimos los principales motivos para que te decidas por modernizar tu negocio y lanzarlo a un nuevo nivel de ventas. ...</p>
+						</div>
+						<div class="post-more">
+					        <%= link_to 'Seguir Leyendo...', new_contact_path(:motivo => "Blog - Tienda"), remote: true, class: "btn btn-small" %>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<div class="post-title">
+							<h3><span>Promociones</span>: como<br/>aprovecharlas al maximo</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">25 FEB, 2015</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>16
+							</div>
+						</div>
+				        <%= link_to image_tag("promociones.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - promociones"), remote: true %>
+						<div class="post-summary">
+							<p>Una práctica muy común para brindar beneficios a sus clientes es generar promociones y descuentos, para aumentar las ventas y fidelizar a los compradores. Te mostramos varias herramientas para generar acciones y muchas más ...</p>
+						</div>
+						<div class="post-more">
+					        <%= link_to 'Seguir Leyendo...', new_contact_path(:motivo => "Blog - promociones"), remote: true, class: "btn btn-small" %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row sin-padd-r mas-consejos">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<div class="post-title">
+							<h3><span>Productos</span>: Como Mejorar<br/>su Descripcion</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">21 DIC, 2014</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>57
+							</div>
+						</div>
+				        <%= link_to image_tag("desc-prod.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - productos"), remote: true %>
+						<div class="post-summary">
+							<p>En un sitio Web (o tienda online), donde no tenemos contacto directo con nuestros clientes, tenemos que pensar muy bien en la descripción de nuestros productos. Dichas Descripciones tienen que tener en cuenta ...</p>
+						</div>
+						<div class="post-more">
+					        <%= link_to 'Seguir Leyendo...', new_contact_path(:motivo => "Blog - productos"), remote: true, class: "btn btn-small" %>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="blog-post">
+						<div class="post-title">
+							<h3><span>Desempeño</span>: 3 indicadores<br/>para medirlo</h3>
+						</div>
+						<div class="post-info">
+							<div class="post-date">
+								<div class="date">29 NOV, 2014</div>
+							</div>
+							<div class="post-comments-count">
+								<i class="glyphicon glyphicon-comment icon-white"></i>11
+							</div>
+						</div>
+				        <%= link_to image_tag("indicad.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - indicadores"), remote: true %>
+						<div class="post-summary">
+							<p>Los Indicadores de Gestión (del Inglés KPI - Key Performance Indicators) pueden ayudarnos a detectar que aspectos necesitamos mejorar y cuáles son los principales logros de nuestro negocio. Lo principal es que ...</p>
+						</div>
+						<div class="post-more">
+					        <%= link_to 'Seguir Leyendo...', new_contact_path(:motivo => "Blog - indicadores"), remote: true, class: "btn btn-small" %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row div-boton">
+				<div class="col-md-4 col-sm-3 col-xs-1"></div>
+				<div class="col-md-4 col-sm-6 col-xs-10 boton-mas">
+			        <%= link_to 'Mostrar Mas Consejos', "#mas-consejos", class: "btn btn-outline-inverse btn-lg btn-idx3 mov-suave" %>
+		        </div>
+				<div class="col-md-4 col-sm-6 col-xs-10 boton-mas2">
+			        <%= link_to 'Mostrar Mas Consejos', new_contact_path(:motivo => "Blog - mas-consejos"), remote: true, class: "btn btn-outline-inverse btn-lg btn-idx3" %>
+		        </div>
+	        </div>
+			</div>
+	</div>
+</div>
+
+<!-- Footer -->
+<!--
+<div class="footer">
+	<div class="container">
+    	<div class="row">
+    		<div class="col-footer col-md-3 col-xs-6">
+    			<h3>Our Latest Work</h3>
+    			<div class="portfolio-item">
+					<div class="portfolio-image">
+						<a href="page-portfolio-item.html"><img src="img/portfolio6.jpg" alt="Project Name"></a>
+					</div>
+				</div>
+    		</div>
+    		<div class="col-footer col-md-3 col-xs-6">
+    			<h3>Navigate</h3>
+    			<ul class="no-list-style footer-navigate-section">
+    				<li><a href="page-blog-posts.html">Blog</a></li>
+    				<li><a href="page-portfolio-3-columns-2.html">Portfolio</a></li>
+    				<li><a href="page-products-3-columns.html">eShop</a></li>
+    				<li><a href="page-services-3-columns.html">Services</a></li>
+    				<li><a href="page-pricing.html">Pricing</a></li>
+    				<li><a href="page-faq.html">FAQ</a></li>
+    			</ul>
+    		</div>
+    		
+    		<div class="col-footer col-md-4 col-xs-6">
+    			<h3>Contacts</h3>
+    			<p class="contact-us-details">
+    				<b>Address:</b> 123 Fake Street, LN1 2ST, London, United Kingdom<br/>
+    				<b>Phone:</b> +44 123 654321<br/>
+    				<b>Fax:</b> +44 123 654321<br/>
+    				<b>Email:</b> <a href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
+    			</p>
+    		</div>
+    		<div class="col-footer col-md-2 col-xs-6">
+    			<h3>Stay Connected</h3>
+    			<ul class="footer-stay-connected no-list-style">
+    				<li><a href="#" class="facebook"></a></li>
+    				<li><a href="#" class="twitter"></a></li>
+    				<li><a href="#" class="googleplus"></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="blog-post">
+					<div class="post-title">
+						<h3><span>Ventas</span>: Como Vender mas<br/>en las Fiestas</h3>
+					</div>
+					<div class="post-info">
+						<div class="post-date">
+							<div class="date">29 NOV, 2014</div>
+						</div>
+						<div class="post-comments-count">
+							<i class="glyphicon glyphicon-comment icon-white"></i>11
+						</div>
+					</div>
+			        <%= link_to image_tag("ventas02.jpg", class: "img-responsive post-image"), new_contact_path(:motivo => "Blog - fiestas"), remote: true %>
+					<div class="post-summary">
+						<p>Nos encontramos con vendedores que nos preguntan, “¿Cómo aprovecho esta época del año para aumentar mis ventas?”.  Navidad, Año Nuevo, Dia de la Madre, del niño, Reyes; las Fiestas son oportunidades especiales ...</p>
+					</div>
+					<div class="post-more">
+				        <%= link_to 'Seguir Leyendo...', new_contact_path(:motivo => "Blog - fiestas"), remote: true, class: "btn btn-small" %>
+					</div>
+				</div>
+			</div>
+
+-->
+
+<!--			<div class="col-xs-12">
+				<div class="blog-post">
+					<div class="post-title">
+						<h3>Categorias</h3>
+					</div>
+					<div class="row post-title">
+						<div class="categorias col-lg-offset-1 col-xs-2">
+							<button class="btn btn-primary" type="button">
+							  Ventas <span class="badge">2</span>
+							</button>
+						</div>
+						<div class="categorias col-xs-2">
+							<button class="btn btn-primary" type="button">
+							  Imagenes <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias col-xs-2">
+							<button class="btn btn-primary" type="button">
+							  Productos <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias col-xs-2">
+							<button class="btn btn-primary" type="button">
+							  Indicadores <span class="badge">1</span>
+							</button>
+						</div>
+						<div class="categorias col-xs-2">
+							<button class="btn btn-primary" type="button">
+							  Preguntas Frecuentes <span class="badge">1</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+-->

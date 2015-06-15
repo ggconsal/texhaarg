@@ -1,0 +1,148 @@
+<% provide(:title, "Quienes Somos |") %>
+
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<section id="about">
+	<div id="quienes">
+	    <div class="container">
+	        <div class="section-heading scrollpoint sp-effect3 active animated fadeInDown">
+	            <h1>Somos Texha<br/>Argentina</h1>
+	            <div class="divider"></div>
+	            <p>Soluciones Simples a Problemas Complejos</p>
+	        </div>
+
+			<div class="col-lg-3 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 sin-padd-r">
+				<div class="blog-post transp">
+					<div class="post-title">
+						<h3>Titulos</h3>
+					</div>
+					<div class="post-title">
+						<ul class="list-group categorias">
+						  <li class="list-group-item">
+						    <span class="badge"><%= @post_badge %></span>
+							<%= link_to "¿Quiénes Somos?", "#tit00", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item">
+						    <%= link_to "¿Por qué Elegirnos?", "#tit01", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item">
+						    <%= link_to "¿Soluciones Rápidas, de Alta Calidad y a un Costo Accesible?", "#tit02", class: "mov-suave-post" %>
+						  </li>
+						  <li class="list-group-item">
+						    <%= link_to "Nuestra Experiencia", "#tit03", class: "mov-suave-post" %>
+						  </li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="blog-post transp">
+					<div class="post-title">
+						<h3>Nuestras Soluciones</h3>
+					</div>
+					<div class="post-title">
+						<ul class="list-group categorias">
+						  <li class="list-group-item">
+				              <%= link_to "Aumente sus Ventas", {:action => "index", :controller => "contacts", :anchor => "pp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item">
+				              <%= link_to "Reduzca los Costos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item">
+				              <%= link_to "Unifique su Informacion de Ventas-Inventario-Gastos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %>
+						  </li>
+						  <li class="list-group-item active">
+					        <%= link_to 'Contactarse con Nosotros', new_contact_path(:motivo => "Quienes somos"), remote: true, style: "color: white;" %>
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 sin-padd-r">
+		        <div class="bs-callout">
+			        <p></p>
+		        </div>
+		        <div id="tit00" class="bs-callout bs-callout-info" >
+		        	<h4>¿Qué es Texha Argentina?</h4>
+		        	<p>Somos un grupo de profesionales, con gran experiencia y conocimiento en empresas de nivel nacional e internacional.<br/> Con fuerte orientación hacia la tecnología, como medio para mejorar el negocio.
+		        </div>
+		        <div class="bs-callout bs-callout-red" >
+		        	<h4>¿Cuál es nuestra Pasión?</h4>
+		        	<p>Trabajar con nuestros clientes con el objetivo de incrementar sus ganancias, aumentando sus ventas y reduciendo sus costos.</p>
+		        </div>
+		        <div class="bs-callout bs-callout-info" >
+		        	<h4>¿Cómo lo hacemos?</h4>
+		        	<p>Aportando toda nuestra experiencia y conocimiento e invirtiendo en el armado de productos y servicios flexibles, que se adaptan fácilmente a las necesidades de nuestros clientes.</p>
+		        </div>
+		        <div id="tit01" class="bs-callout bs-callout-green" >
+		        	<h4>¿Por qué Elegirnos a Nosotros?</h4>
+		        	<p>Porque somos una empresa experimentada, ágil y práctica. <br/>Con Soluciones Rápidas, de alta Calidad y a un costo Accesible.</p>
+		        </div>
+		        <div id="tit02" class="bs-callout bs-callout-info" >
+		        	<h4>¿Cómo se logran Soluciones Rápidas, de Alta Calidad y a un Costo Accesible?</h4>
+		        	<p>Porque nos basamos en el principio de las “Soluciones Standard”, que expresa que más del 70% de los problemas de una empresa, tienen causas muy similares al resto de las Compañías.  Dejando la minoría de problemas para resolverlo con más tiempo y con una solución a medida, de ser necesario.<br/>
+					Si su empresa se identifica con esta definición, lo cual es muy probable, podremos implementar nuestras soluciones, y así aumentar sus ventas y reducir sus gastos, a un costo que pueda afrontar y en muy poco tiempo.
+					</p>
+		        </div>
+		        <div class="bs-callout bs-callout-info" >
+		        	<h4>¿Qué es “Alta Calidad” para Texha?</h4>
+		        	<p>Alta calidad significa que cada producto o servicio se basa en la Tecnología más avanzada y en las últimas y más probadas técnicas de marketing (en el caso de ventas) y de ingeniería (en el caso de costos).</p>
+		        </div>
+		        <div class="bs-callout">
+			        <p><br/><br/><br/></p>
+		        </div>
+				<div id="tit03" class="blog-post transp">
+					<div id="tit01" class="post-summary">
+						<h3><span></span>Experiencia</h3>
+						<%= link_to image_tag("experiencia.png", class: "img-responsive quienes-image"), new_contact_path(:motivo => "Quienes somos - Experiencia"), remote: true %>
+					<!-- PRIMER subtitulo  -->
+
+						<!-- PRIMER subtitulo >>> PRIMER texto  -->
+						<h4><br/><br/>Proyectos Internacionales</h4>
+				      	<p><br/></p>
+					    <ul type="circle">
+					      <li>
+							<p>Proyecto SAP (EE.UU.-NY, Mexico y Europa: Ventas, Call Center y Contabilidad)</p>
+					      </li>
+					      <li>
+							<p>Proyecto Cobranzas (Brasil: Gestion de Cobranzas)</p>
+					      </li>
+					      <li>
+							<p>Proyecto Avaya (Mexico: Automatiacion de Llamadas)</p>
+					      </li>
+					      <li>
+							<p>Proyecto Fiserv (EE.UU.-Orlando: Reemplazo del Sistema Bancario)</p>
+					      </li>
+					    </ul>
+						<h4><br/><br/><br/>Proyectos Nacionales</h4>
+				      	<p><br/></p>
+					    <ul type="circle">
+					      <li>
+							<p>Proyecto Siebel (Ventas en 100 Sucursales y 1200 puntos en todo el Pais)</p>
+					      </li>
+					      <li>
+							<p>Proyecto MercadoLibre (Conciliador de Medios de Cobro)</p>
+					      </li>
+					      <li>
+							<p>Proyecto Meta4 (Sistema de RRHH)</p>
+					      </li>
+					      <li>
+							<p>Proyecto Exprian (Ventas en 950 Comercios)</p>
+					      </li>
+					      <li>
+							<p>Proyecto NQN (Neuquen: Reemplazo del Sistema Bancario)</p>
+					      </li>
+					    </ul>
+					</div>
+					<div class="post-summary"> 	
+					</div>
+				</div>
+		        <div class="bs-callout">
+			        <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+		        </div>
+	        </div>
+	    </div>
+	</div>
+</section>
+
+
+

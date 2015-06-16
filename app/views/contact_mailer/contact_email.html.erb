@@ -13,7 +13,7 @@
 <p>Podra ingresar con su email y la clave "<%= @contact.password %>", Presionando en el link de abajo ...<br/></p>
 
 
-<p><%= link_to 'Presiona Aquí para confirmar su mail', "#" %></p>
+<p><%= link_to 'Presiona Aquí para confirmar su mail', {:action => "index", :controller => "contacts"} %></p>
 
 
 <p>... y así acceder a toda la información sin restricciones.</p>

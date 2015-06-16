@@ -1,17 +1,15 @@
 <%= form_for(@contact) do |f| %>
 
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 confirm">
+	<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6 confirm">
 		<div>
 
 			<ul class="errors"></ul>
 
-			<h1>¡Bienvenido  <%= @contact.con_nya %>!!</h1>
+			<h2>¡Ya estamos en contacto <%= @contact.con_nya %>!!</h2>
 
-      <h3>¡Su mail <%= @contact.con_mail %></h3>
+      <h4>¡Su mail <%= @contact.con_mail %> se ha registrado exitosamente!! </h4>
 
-      <h3>Se ha registrado exitosamente!! </h3>
-
-      <h4><br/>Por favor presione el boton 'Ingresar al sistema' ...<br/><br/></h4>
+      <p>Por favor presione el boton 'Ingresar al sistema' ...<br/><br/></p>
 
 
 			<div class="row">
@@ -28,13 +26,12 @@
 		</div>
 
 		<div>
-			<div class="col-xs-6 col-sm-7 col-md-7 col-lg-7">
-			  <%= image_tag("texhablanco100x40.jpg") %>
-			</div>
 			<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
 			  <%= f.submit 'Ingresar al sistema', :class=>"btn btn-outline-inverse btn-md btn-idx3" %>
 			</div>
 		</div>
+
+    <p></p>
 	</div>
 
 <% end %>

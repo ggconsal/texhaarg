@@ -27,10 +27,10 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    ContactMailer.contact_email(@contact).deliver
-
     respond_to do |format|
       if @contact.save
+        ContactMailer.contact_email(@contact).deliver
+
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
         format.json { render :show, status: :created, location: @contact }
       else
@@ -45,8 +45,8 @@ class ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
-        format.json { render :show, status: :ok, location: @contact }
+        format.html { redirect_to contacts_url, notice: 'Contact was successfully updated.' }
+        format.json { render :index, status: :ok }  #, location: @contact }
       else
         format.html { render :edit }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -62,6 +62,13 @@ class ContactsController < ApplicationController
       format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def mail_confirmation
+
+    #@contact = Contact.find_by  con_mail: params[:mail]
+    @contact = Contact.find(params[:id_usuario])
+
   end
 
   def post
@@ -355,6 +362,6 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:con_nya, :con_nombre, :con_apellido, :profile_id, :con_telefono, :con_obs, :con_boton_sitio, :con_telefono_sn, :con_mail, :con_password, :con_password2, :con_suscribir, :con_confirmado, :con_password_confirmacion, :option_id, :canalingreso_id, :password, :password_confirmation)
+      params.require(:contact).permit(:id, :con_nya, :con_nombre, :con_apellido, :profile_id, :con_telefono, :con_obs, :con_boton_sitio, :con_telefono_sn, :con_mail, :con_password, :con_password2, :con_suscribir, :con_confirmado, :con_password_confirmacion, :option_id, :canalingreso_id, :password, :password_confirmation)
     end
 end

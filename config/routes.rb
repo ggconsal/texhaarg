@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'contacts/post'
   get 'contacts/ventas2'
   get 'contacts/ventas1'
+  get 'contacts/mail_confirmation'
 
   resources :contacts
 

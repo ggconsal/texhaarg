@@ -5,18 +5,15 @@
 </head>
 <body>
 
-<h3>Bienvenido <%= @contact.con_mail %></h3>
+<h3> Bienvenido <%= @contact.con_nya %>,</h3>
 
-<h4>¡Se ha registrado exitosamente, Solo queda un simple paso!</h4>
+<h4>¡Solo queda un simple paso para finalizar la registracion!</h4>
 
+<p> Por favor, presione el link.<br/></p>
 
-<p>Podra ingresar con su email y la clave "<%= @contact.password %>", Presionando en el link de abajo ...<br/></p>
+<p><%= link_to 'Presiona Aquí para confirmar su mail', contacts_mail_confirmation_path(:id_usuario => @contact.id) %></p>
 
-
-<p><%= link_to 'Presiona Aquí para confirmar su mail', {:action => "index", :controller => "contacts"} %></p>
-
-
-<p>... y así acceder a toda la información sin restricciones.</p>
+<p><br/>... y así podra acceder a toda la información sin restricciones.</p>
 
 
 

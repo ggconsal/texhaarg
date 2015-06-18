@@ -15,6 +15,10 @@ group :production do
 	gem 'rails_serve_static_assets'
 	gem 'rails_stdout_logging'
 
+	# Web server para Heroku
+	# Trabaja con el Procfile y el config/puma.rb
+	gem 'puma'
+
 end
 
 group :test, :development do
@@ -59,8 +63,4 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# Web server para Heroku
-# Trabaja con el Procfile y el config/puma.rb
-gem 'puma'
 

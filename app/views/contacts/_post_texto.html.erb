@@ -876,14 +876,23 @@
 					<!-- ULTIMO subtitulo  -->
 
 						<h3><%= @post_subtit99 %></h3>
-					    <p> <a href=<%= @post_link99a2 %> target="_blank"><%= @post_link99a1 %></a> </p>
-					    <p> <a href=<%= @post_link99b2 %> target="_blank"><%= @post_link99b1 %></a> </p>
-					    <p> <a href=<%= @post_link99c2 %> target="_blank"><%= @post_link99c1 %></a> </p>
-					    <p> <a href=<%= @post_link99d2 %> target="_blank"><%= @post_link99d1 %></a> </p>
-					    <p> <a href=<%= @post_link99e2 %> target="_blank"><%= @post_link99e1 %></a> </p>
-					    <p> <a href=<%= @post_link99f2 %> target="_blank"><%= @post_link99f1 %></a> </p>
-					    <p> <a href=<%= @post_link99g2 %> target="_blank"><%= @post_link99g1 %></a> </p>
-					    <p> <a href=<%= @post_link99h2 %> target="_blank"><%= @post_link99h1 %></a> </p>
+			            <% if logged_in? %>
+						    <p> <a href=<%= @post_link99a2 %> target="_blank"><%= @post_link99a1 %></a> </p>
+						    <p> <a href=<%= @post_link99b2 %> target="_blank"><%= @post_link99b1 %></a> </p>
+						    <p> <a href=<%= @post_link99c2 %> target="_blank"><%= @post_link99c1 %></a> </p>
+						    <p> <a href=<%= @post_link99d2 %> target="_blank"><%= @post_link99d1 %></a> </p>
+						    <p> <a href=<%= @post_link99e2 %> target="_blank"><%= @post_link99e1 %></a> </p>
+						    <p> <a href=<%= @post_link99f2 %> target="_blank"><%= @post_link99f1 %></a> </p>
+						    <p> <a href=<%= @post_link99g2 %> target="_blank"><%= @post_link99g1 %></a> </p>
+						    <p> <a href=<%= @post_link99h2 %> target="_blank"><%= @post_link99h1 %></a> </p>
+			            <% else %>
+			            	<p>Ingrese al sistema, para obtener todos los links.</p><br/> 
+							<div class="col-xs-6 col-sm-offset-1">
+							<p style="color:green;">¿Ya es Usuario? <br/><%= link_to "Ingresar al Sistema", login_path, :class=>"btn btn-outline-inverse btn-md btn-idx3" %>
+					        <p style="color:red; margin-bottom: 2px;">¿Todavia no es Usuario? <br/><%= link_to 'Registrese ya!', new_contact_path(:motivo => "Blog - Post"), remote: true, :class=>"btn btn-outline-inverse btn-md btn-idx3" %><br/></p>
+					        <p style="color:green;">En un simple paso y gratis!</p>
+							</div>
+			            <% end %>
 
 					    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 					</div>

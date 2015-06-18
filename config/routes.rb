@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   get 'contacts/quienes'
   get 'contacts/blog'
   get 'contacts/post'
   get 'contacts/ventas2'
   get 'contacts/ventas1'
   get 'contacts/mail_confirmation'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
   resources :contacts
 

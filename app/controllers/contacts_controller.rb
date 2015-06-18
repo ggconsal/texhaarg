@@ -20,6 +20,13 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1/edit
   def edit
+
+    if @contact.con_nombre == "" && @contact.con_nya != ""
+        @contact.con_nombre = @contact.con_nya
+    end
+
+    @tipo = params[:tipo]
+
   end
 
   # POST /contacts
@@ -30,8 +37,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         ContactMailer.contact_email(@contact).deliver
-        #log_in @contact
-        flash[:success] = "Welcome to the Sample App!"
+        
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
         format.json { render :show, status: :created, location: @contact }
       else
@@ -46,6 +52,10 @@ class ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
+
+        log_in @contact
+        flash[:success] = "Welcome to the Sample App!"
+        
         format.html { redirect_to contacts_url, notice: 'Contact was successfully updated.' }
         format.json { render :index, status: :ok }  #, location: @contact }
       else

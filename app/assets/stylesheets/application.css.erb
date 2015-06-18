@@ -26,6 +26,15 @@ body, html, .div-ppal {
 	height: 100%;
 }
 
+.form-control {
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  border-radius: 10%;
+}
+
+
 /*
 --------------------------------------------------------------------
 ---- MENU PRINCIPAL
@@ -457,7 +466,7 @@ body, html, .div-ppal {
 
 #contact_con_nya, #contact_con_mail, #contact_con_telefono, 
   #contact_password, #contact_password_confirmation, #session_email, 
-  #session_password {
+  #session_password, #contact_con_nombre, #contact_con_apellido {
 	padding: 0px 20px;
 	margin-bottom: 10px;
 }
@@ -469,7 +478,7 @@ body, html, .div-ppal {
 --------------------------------------------------------------------
 */
 
-#div-blog, #quienes {
+#div-blog, #quienes, #modif-datos, #ingresar {
   background: url('page-background.png');
 }
 
@@ -661,9 +670,24 @@ body, html, .div-ppal {
 */
 
 .confirm {
-	margin-top: 60px;
-	margin-left: 50px;
+	margin-top: 7%;
+	margin-left: 5%;
+	border-radius: 5%;
 }
+
+.confirm-footer {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.confirm-body {
+	margin-top: 4%;
+}
+
+.confirm-header {
+	text-align: center;
+}
+
 /*
 --------------------------------------------------------------------
 ---- MEDIA QUERIES 

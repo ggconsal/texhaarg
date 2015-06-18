@@ -2,30 +2,26 @@
   <div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   </div>
 
-  <div class="col-md-6 col-md-offset-4 confirm">
+  <div id="ingresar" class="col-md-6 col-md-offset-4 confirm">
 
     <h1>Ingresar al Sistema</h1>
     <%= form_for(:session, url: login_path) do |f| %>
 
-      <div class="field">
-        <%= f.email_field :email, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
-      </div><br/>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="field">
+          <br/><%= f.email_field :email, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
+        </div><br/>
 
-      <div class="field">
-        <%= f.password_field :password, :required => true, :placeholder => "Ingrese su Clave...", :class=>"form-control" %>
-      </div><br/><br/>
+        <div class="field">
+          <%= f.password_field :password, :required => true, :placeholder => "Ingrese su Clave...", :class=>"form-control" %>
+        </div><br/><br/>
+      </div>
 
-<!--
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
--->
       <div class="col-xs-6 col-xs-offset-6">
-        <%= f.submit "Ingresar al Sistema", :class=>"btn btn-outline-inverse btn-md btn-idx3" %>
-        <p>Nuevo Usuario? <%= link_to 'Registrese ya!', new_contact_path(:motivo => "Blog - Post"), remote: true %></p>
-      </div><br/>
+        <p style="color:green;"><%= f.submit "Ingresar al Sistema", :class=>"btn btn-outline-inverse btn-md btn-idx3" %>
+        <p style="color:red; margin-bottom: 2px;">¿Todavia no es Usuario? <br/><%= link_to 'Registrese ya!', new_contact_path(:motivo => "Blog - Post"), remote: true, :class=>"btn btn-outline-inverse btn-md btn-idx3" %><br/></p>
+        <p style="color:green;">En un simple paso y gratis!</p>
+      </div><br/><br/>
     <% end %>
 
   </div>

@@ -84,8 +84,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% if logged_in? %>
-              <li><%= link_to "Modificar mis Datos", current_contact %></li>
-              <li><%= link_to "Cambiar la Clave", current_contact %></li>
+              <li><%= link_to "Modificar mis Datos",  edit_contact_path(:id => current_contact.id, :tipo => "datos") %></li>
+              <li><%= link_to "Cambiar la Clave",  edit_contact_path(:id => current_contact.id, :tipo => "clave") %></li>
               <li class="divider"></li>
               <li><%= link_to "Salir del Sistema", logout_path, method: "delete" %></li>
             <% else %>

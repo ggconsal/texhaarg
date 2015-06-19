@@ -1,9 +1,15 @@
-
 <div id="modif-datos" class="col-md-5 col-md-offset-4 confirm">
 	<%= form_for(@contact) do |f| %>
+		<div class="confirm-header" >
+			<h1>Modificar mis Datos</h1>
+
+			<h4> <b><%= @contact.con_nya %> (<%= @contact.con_mail %>)</b></h4>
+		</div>
+
+		<!--
 		<% if @contact.errors.any? %>
 			<div id="error_explanation">
-				<h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+				<h2>Hubo <%= pluralize(@contact.errors.count, "error") %>. No se pueden almacenar los Datos porque:</h2>
 
 				<ul>
 					<% @contact.errors.full_messages.each do |message| %>
@@ -12,12 +18,14 @@
 				</ul>
 			</div>
 		<% end %>
+		-->
 
-		<div class="confirm-header" >
-			<h1>Modificar mis Datos</h1>
-
-			<h4> <b><%= @contact.con_nya %> (<%= @contact.con_mail %>)</b></h4>
-		</div>
+		<% if @contact.errors.any? %>
+			<div class="alert alert-warning alert-dismissible">
+				<p><b>Mensajes: </b> <%= flash[:danger] %></p>
+			</div>
+		<% end %>
+	
 		<% if @tipo == "datos" %>
 			<div class="col-xs-12 col-md-10 col-md-offset-1 confirm-body">
 				<div class="field">
@@ -60,10 +68,10 @@
 		<% else %>
 			<div class="col-xs-12 col-md-10 col-md-offset-1 confirm-body">
 				<div class="field">
-					<%= f.password_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+					<%= f.password_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese la Nueva Clave...", :class=>"form-control" %>
 				</div>
 				<div class="field">
-					<%= f.password_field :password_confirmation, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+					<%= f.password_field :password_confirmation, :required => true,  :value => @clave, :placeholder => "Confirme la clave ingresada...", :class=>"form-control" %>
 				</div>
 			</div>
 		<% end %>

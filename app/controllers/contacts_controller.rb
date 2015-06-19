@@ -38,7 +38,7 @@ class ContactsController < ApplicationController
       if @contact.save
         ContactMailer.contact_email(@contact).deliver
         
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to @contact, :notice => "Contacto Creado" }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
@@ -58,9 +58,11 @@ class ContactsController < ApplicationController
         
         format.html { redirect_to contacts_url, notice: 'Contact was successfully updated.' }
         format.json { render :index, status: :ok }  #, location: @contact }
+
       else
         format.html { render :edit }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
+        flash.now[:danger] = 'Las claves deben coincidir entre ellas. Por favor, intentelo nuevamente.'
       end
     end
   end

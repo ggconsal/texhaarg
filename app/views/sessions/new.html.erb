@@ -1,11 +1,14 @@
 <% provide(:title, "Ingresar al Sistema") %>
-  <div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  </div>
-
   <div id="ingresar" class="col-md-6 col-md-offset-4 confirm">
 
     <h1>Ingresar al Sistema</h1>
     <%= form_for(:session, url: login_path) do |f| %>
+
+      <% if flash[:danger] %>
+        <div class="alert alert-warning alert-dismissible">
+          <p><b>Mensajes: </b> <%= flash[:danger] %></p>
+        </div>
+      <% end %>
 
       <div class="col-md-10 col-md-offset-1">
         <div class="field">

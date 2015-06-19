@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         render 'new'
       end
     else
-      flash.now[:danger] = 'email o Password Errónea'
+      flash.now[:danger] = 'email o Password Errónea. Por favor, intentelo nuevamente.'
       render 'new'
     end
   end

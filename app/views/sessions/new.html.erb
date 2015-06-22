@@ -1,5 +1,5 @@
-<% provide(:title, "Ingresar al Sistema") %>
-  <div id="ingresar" class="col-md-6 col-md-offset-4 confirm">
+<% provide(:title, "Ingresar al Sistema |") %>
+  <div id="ingresar" class="col-xs-offset-1 col-xs-10 col-sm-10 col-md-9 confirm">
 
     <h1>Ingresar al Sistema</h1>
     <%= form_for(:session, url: login_path) do |f| %>
@@ -20,9 +20,12 @@
         </div><br/><br/>
       </div>
 
-      <div class="col-xs-6 col-xs-offset-6">
+      <div class="col-xs-12 col-xs-offset-2 col-sm-offset-4">
         <p style="color:green;"><%= f.submit "Ingresar al Sistema", :class=>"btn btn-outline-inverse btn-md btn-idx3" %>
-        <p style="color:red; margin-bottom: 2px;">¿Todavia no es Usuario? <br/><%= link_to 'Registrese ya!', new_contact_path(:motivo => "Blog - Post"), remote: true, :class=>"btn btn-outline-inverse btn-md btn-idx3" %><br/></p>
+        <div>
+          <p style="color:red;">¿Todavia no es Usuario? <br/></p>
+        </div>
+        <%= link_to 'Registrese ya!', new_contact_path(:motivo => "Blog - Post"), remote: true, :class=>"btn btn-outline-inverse btn-md btn-idx3" %><br/>
         <p style="color:green;">En un simple paso y gratis!</p>
       </div><br/><br/>
     <% end %>

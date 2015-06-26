@@ -4,162 +4,40 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>https://texhaarg.herokuapp.com/</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=menu+-+ventas</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=menu+-+costos</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/quienes</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/blog</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/login</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/ventas1</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/ventas2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVentas+-+Cafe</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaCostos+-+reduccion</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaCostos+-+unificada</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaCostos+-+cafe</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Quienes+somos</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Quienes+somos+-+Experiencia</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+transmitir</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+imagenes</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+Tienda</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+promociones</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+productos</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+indicadores</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+mas-consejos</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=Blog+-+Post</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Mas+Informaci%C3%B3n</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Cafe</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Llamame</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Cafe2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Explicame</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+llamame2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Cafe3</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaShop+-+Mas+Informaci%C3%B3n2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Mas+Informaci%C3%B3n</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Cafe</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Llamar</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Cafe2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Expliquenme</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Llamar2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+Cafe3</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=txaVision+-+M%C3%A1s+Informaci%C3%B3n</loc>
-  <changefreq>daily</changefreq>
-</url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=menu+-+ventas</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/new?motivo=menu+-+costos</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/quienes</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/blog</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/login</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/ventas1</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://texhaarg.herokuapp.com/contacts/ventas2</loc>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ar">
 <head>
 
   <title><%= yield(:title) %> Texha Argentina, Soluciones Simples a Problemas Complejos</title>
-  <meta name="keywords" content="Aumentar Rentabilidad, Aumentar las Ventas, Reducir los Costos, Tienda on-line, Tienda online, Tienda Virtual, ecommerce, Tienda prearmada, Tienda pre-armada, Tienda pre-fabricada, Tienda prefabricada, Experiencia Comercial, Seriedad, Tecnologia, internet, seo">
+  <meta name="keywords" content="Aumentar Rentabilidad, Aumentar las Ventas, Reducir los Costos, Tienda on-line, Tienda online, Tienda Virtual,ecommerce,Tienda prearmada,Tienda pre-armada,Tienda pre-fabricada,Tienda prefabricada,Experiencia Comercial,Seriedad,Tecnologia,internet,seo">
   <meta name="description" content="Nuestra Pasión: Incrementar sus ganancias, Facilitando la Tecnologia (aumentando sus ventas y reduciendo sus costos).">
+  <meta name="distribution" content="global"/>
+  <meta name="Robots" content="all"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -27,10 +29,28 @@
 <div id="div-mensajes" class="alert alert-success alert-dismissible col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-8 col-md-offset-3 col-md-7 col-lg-6 hide" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <p><br/>
+
+    <div>
+
+      <h2>¡Ya estamos por Terminar!</h2>
+
+      <h4>Solo necesitamos que <b>Confirmes tu dirección</b><br/>de Correo Electrónico.</h4>
+
+      <h4>Para ello te enviamos un <b>email</b><br/>con un <b>Enlace de Confirmación.</b></h4><br/>
+
+      <h4> <b>Si ves que no llega:</b> por favor revisa<br/>si no está en la carpeta de SPAM</h4><br/>
+
+    </div>
+
+
+  <p></p>
+
+<!--
     <strong>¡Buenas Noticias! </strong> Su solicitud fue recibida.<br/><br/>
     ... y ya le enviamos un <u>mail</u> con su <u><b>Clave Personal Provisoria</u></b> (Password), <br/><br/>
     Para que pueda ingresar a nuestro sitio en forma Segura.
   </p><br/>
+-->
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-top col-xs-9 col-sm-9 col-md-9 col-lg-9" role="navigation">
@@ -116,9 +136,7 @@
         <div class="well" style="padding-left: 3px;padding-right: 3px;padding-top: 10px;padding-bottom: 0px;background: rgba(0, 0, 0, 0);border:0px">
           <ul class="nav">
             <li class="nav-header" style="margin-bottom: 10px;">
-              <a href="mailto:info@texhaarg.com" target="_blank" style="padding: 0px;background: rgba(0,0,0,0)">
-              <%= image_tag "email_32.png", style: "width: 100%;" %>
-              </a>
+              <%= link_to image_tag("email_32.png", style:"width: 100%;"), new_contact_path(:motivo => "redes"), remote: true, style:"padding: 0px;" %>
             </li>
             <div class="clear"></div>
             <li class="nav-header" style="margin-bottom: 10px;">
@@ -152,3 +170,12 @@
 </body>
 </html>
 
+
+<!--
+            <li class="nav-header" style="margin-bottom: 10px;">
+              <a href="mailto:info@texhaarg.com" target="_blank" style="padding: 0px;background: rgba(0,0,0,0)">
+              <%= image_tag "email_32.png", style: "width: 100%;" %>
+              </a>
+            </li>
+
+-->

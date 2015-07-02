@@ -53,7 +53,6 @@ $(document).ready(function(){
 
 	$('.mas-consejos').hide();
 	$('.boton-mas2').hide();
-//	$('#div-mensajes').hide();
 
 	$('.boton-mas').click(function() {
 		$('.mas-consejos').show();
@@ -105,5 +104,6 @@ $(document).ready(function(){
            scrollTop: '0px'
         },
         1500); 
+		$('#div-mensajes').hide();
 
 */

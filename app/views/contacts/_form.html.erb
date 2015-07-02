@@ -18,12 +18,18 @@
             <h3>¿Quieres aumentar tus Ventas?</h3>
             <% elsif @contact.con_boton_sitio.include? "txaVision" %>
               <h3>¿Quieres aumentar tus Ventas?</h3>
+              <% elsif @contact.con_boton_sitio.include? "menu - ventas" %>
+                <h3>¿Quieres aumentar tus Ventas?</h3>
 
         <% elsif @contact.con_boton_sitio.include? "txaCostos" %>
           <h3>¿Quieres reducir los Costos?</h3>
+          <% elsif @contact.con_boton_sitio.include? "menu - costos" %>
+            <h3>¿Quieres reducir los Costos?</h3>
 
-        <% elsif @contact.con_boton_sitio.include? "menu" %>
-          <h3>¿Quieres comunicarte con nosotros?</h3>
+        <% elsif @contact.con_boton_sitio.include? "redes" %>
+          <h3>¿Quieres Aumentar tu Rentabilidad?</h3>
+          <% elsif @contact.con_boton_sitio.include? "quienes somos" %>
+            <h3>¿Quieres Aumentar tu Rentabilidad?</h3>
 
         <% end %>
 
@@ -33,7 +39,16 @@
 
         <ul class="errors"></ul>
 
-        <h4 class="modal-header-h4">¡Anótate Gratis y te enviaremos<br/>Información útil para tu Pyme!</h4>
+        <% if @contact.con_boton_sitio.include? "redes" %>
+          <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
+          <% elsif @contact.con_boton_sitio.include? "menu" %>
+            <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
+            <% elsif @contact.con_boton_sitio.include? "quienes" %>
+              <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
+        <% else %>
+          <h4 class="modal-header-h4">¡Anótate Gratis y te enviaremos<br/>Información útil para tu Pyme!</h4>
+        <% end %>
+
         <% @clave = Time.now.year.to_s + Time.now.month.to_s + rand(10000..99999).to_s %>
         <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 confirm-body">
           <div class="field">
@@ -42,6 +57,17 @@
           <div class="field">
             <%= f.email_field :con_mail, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
           </div>
+
+          <% if @contact.con_boton_sitio.include? "redes" %>
+            <div class="field">
+              <%= f.text_area :con_obs, :placeholder => "Dejenos su Comentario...", :class=>"form-control" %>
+            </div>
+          <% else %>
+            <div class="field hide">
+              <%= f.text_area :con_obs, :placeholder => "Dejenos su Comentario...", :class=>"form-control" %>
+            </div>
+          <% end %>
+
           <div class="field hide">
             <%= f.password_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
           </div>
@@ -52,17 +78,6 @@
             <%= f.text_area :con_boton_sitio, :class=>"form-control" %>
           </div>
 
-          <% if @contact.con_boton_sitio.include? "txaShop" %>
-            <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
-            <% elsif @contact.con_boton_sitio.include? "txaVentas" %>
-              <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
-              <% elsif @contact.con_boton_sitio.include? "txaVision" %>
-                <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
-                <% elsif @contact.con_boton_sitio.include? "txaCostos" %>
-                  <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
-                  <% elsif @contact.con_boton_sitio.include? "menu" %>
-                    <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
-          <% end %>
         </div>
       </div>
 
@@ -74,7 +89,15 @@
           <%= image_tag("texhablanco100x40.jpg") %>
         </div>
         <div id="divMeAnoto" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <%= f.submit '¡Me Anoto!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+          <% if @contact.con_boton_sitio.include? "redes" %>
+            <%= f.submit '¡Enviar!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+            <% elsif @contact.con_boton_sitio.include? "menu" %>
+              <%= f.submit '¡Enviar!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+              <% elsif @contact.con_boton_sitio.include? "quienes" %>
+                <%= f.submit '¡Enviar!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+          <% else %>
+            <%= f.submit '¡Me Anoto!', :class=>"btn btn-outline-inverse btn-md btn-idx3", :id=>"gc-aceptar" %>
+          <% end %>
         </div>
       </div>
     <% end %>
@@ -82,3 +105,18 @@
 </div>
 
 
+
+<!--
+          <% if @contact.con_boton_sitio.include? "txaShop" %>
+            <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+            <% elsif @contact.con_boton_sitio.include? "txaVentas" %>
+              <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+              <% elsif @contact.con_boton_sitio.include? "txaVision" %>
+                <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+                <% elsif @contact.con_boton_sitio.include? "txaCostos" %>
+                  <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+                  <% elsif @contact.con_boton_sitio.include? "menu" %>
+                    <h4 class="modal-header-h4">Nos contactaremos contingo<br/>Hoy mismo</h4>
+          <% end %>
+
+-->

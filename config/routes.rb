@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'contacts/ventas2'
   get 'contacts/ventas1'
   get 'contacts/mail_confirmation'
+  get 'contacts/mail_explanation'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

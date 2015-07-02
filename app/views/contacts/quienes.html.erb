@@ -3,7 +3,7 @@
 <section id="about">
 	<div id="quienes">
 	    <div class="container">
-	        <div class="section-heading scrollpoint sp-effect3 active animated fadeInDown">
+	        <div class="section-heading scrollpoint sp-effect3 active animated fadeInDown sin-marg-bot">
 	            <h1>Somos Texha<br/>Argentina</h1>
 	            <div class="divider"></div>
 	            <p>Soluciones Simples a Problemas Complejos</p>
@@ -49,7 +49,7 @@
 				              <%= link_to "Unifique su Informacion de Ventas-Inventario-Gastos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %>
 						  </li>
 						  <li class="list-group-item active">
-					        <%= link_to 'Contactarse con Nosotros', new_contact_path(:motivo => "Quienes somos"), remote: true, style: "color: white;" %>
+					        <%= link_to 'Contactarse con Nosotros', new_contact_path(:motivo => "quienes somos"), remote: true, style: "color: white;" %>
 						  </li>
 						</ul>
 					</div>
@@ -59,17 +59,23 @@
 		        <div class="bs-callout">
 			        <p></p>
 		        </div>
-		        <div id="tit00" class="bs-callout bs-callout-info" >
-		        	<h4>¿Qué es Texha Argentina?</h4>
-		        	<p>Somos un grupo de profesionales, con gran experiencia y conocimiento en empresas de nivel nacional e internacional.<br/> Con fuerte orientación hacia la tecnología, como medio para mejorar el negocio.
+		        <div id="tit00" class="bs-callout bs-callout-info sin-marg-bot" >
+		        	<h4>¿Quiénes Somos?</h4>
+		        	<p>Somos un grupo de profesionales, con especialización en las áreas de Tecnología, Ingeniería, Ventas y Marketing. <br/>Con <%= link_to "Experiencia", "#tit03", class: "mov-suave-post" %> y conocimiento en Empresas Nacionales e Internacionales, de primer nivel.
 		        </div>
-		        <div class="bs-callout bs-callout-red" >
-		        	<h4>¿Cuál es nuestra Pasión?</h4>
-		        	<p>Trabajar con nuestros clientes con el objetivo de incrementar sus ganancias, aumentando sus ventas y reduciendo sus costos.</p>
+		        <div class="bs-callout bs-callout-red sin-marg-bot" >
+		        	<h4>¿En que lo podemos Ayudar?</h4>
+		        	<p>En aumentar sus ganancias, teniendo más <%= link_to "Ventas", {:action => "index", :controller => "contacts", :anchor => "pp"}, :class=>"mov-suave" %> y reduciendo los <%= link_to "Costos", {:action => "index", :controller => "contacts", :anchor => "ppp"}, :class=>"mov-suave" %> de su Negocio. 
+		        	<p/>
+		        	<p>
+		        	Puede ingresar a nuestro "<%= link_to 'Blog', contacts_blog_path %>" en forma Gratuita y encontrará diversos artículos muy interesantes, que lo ayudarán en la gestión de su Negocio. Sobre como aumentar sus ventas, como lograr confianza en los compradores, como mejorar las imágenes de su Página Web, etc.
+					</p>
 		        </div>
 		        <div class="bs-callout bs-callout-info" >
 		        	<h4>¿Cómo lo hacemos?</h4>
-		        	<p>Aportando toda nuestra experiencia y conocimiento e invirtiendo en el armado de productos y servicios flexibles, que se adaptan fácilmente a las necesidades de nuestros clientes.</p>
+		        	<p>Con mucha pasión facilitamos la Tecnología y la ponemos a su disposición, como medio para aumentar la rentabilidad de su Negocio. 
+		        	<br/>Invirtiendo y aportando toda nuestra experiencia y conocimiento, en el armado de productos flexibles, que se adaptan fácilmente a sus necesidades.
+					</p>
 		        </div>
 		        <div id="tit01" class="bs-callout bs-callout-green" >
 		        	<h4>¿Por qué Elegirnos a Nosotros?</h4>
@@ -77,7 +83,12 @@
 		        </div>
 		        <div id="tit02" class="bs-callout bs-callout-info" >
 		        	<h4>¿Cómo se logran Soluciones Rápidas, de Alta Calidad y a un Costo Accesible?</h4>
-		        	<p>Porque nos basamos en el principio de las “Soluciones Standard”, que expresa que más del 70% de los problemas de una empresa, tienen causas muy similares al resto de las Compañías.  Dejando la minoría de problemas para resolverlo con más tiempo y con una solución a medida, de ser necesario.<br/>
+		        	<p>Porque nos basamos en el principio de las “Soluciones Standard”, que expresa que más del 70% de los problemas de una empresa, son similares al resto de las Compañías.  
+					<p/>
+					<p>
+					Construimos productos para solucionar rápidamente ese gran porcentaje, dejando la minoría de problemas para resolverlo con tiempo y con una solución a medida (en el caso de ser necesario).
+					<p/>
+					<p>
 					Si su empresa se identifica con esta definición, lo cual es muy probable, podremos implementar nuestras soluciones, y así aumentar sus ventas y reducir sus gastos, a un costo que pueda afrontar y en muy poco tiempo.
 					</p>
 		        </div>

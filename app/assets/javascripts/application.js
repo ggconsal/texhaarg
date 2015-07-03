@@ -46,6 +46,42 @@ $(document).ready(function(){
 		    if ($target.length) {
 		        var targetOffset = $target.offset().top;
 		        $('html,body').animate({scrollTop: targetOffset}, 2000);
+
+				setTimeout(function() {
+			    },1000);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeOut(200);
+			    },2000);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeIn(200);
+			    },2500);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeOut(200);
+			    },3000);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeIn(200);
+			    },3500);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeOut(200);
+			    },4000);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeIn(200);
+			    },4500);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeOut(200);
+			    },5000);
+
+				setTimeout(function() {
+			        $(".glyphicon-hand-right").fadeIn(200);
+			    },5500);
+
 		        return false;
 		    }
 		}

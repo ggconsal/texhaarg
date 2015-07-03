@@ -9,10 +9,7 @@
 
 <!--
 -->
-        <% if @contact.con_boton_sitio.include? "Blog" %>
-          <h3>¿Quieres mejorar tu Negocio?</h3>
-
-        <% elsif @contact.con_boton_sitio.include? "txaShop" %>
+        <% if @contact.con_boton_sitio.include? "txaShop" %>
           <h3>¿Quieres aumentar tus Ventas?</h3>
           <% elsif @contact.con_boton_sitio.include? "txaVentas" %>
             <h3>¿Quieres aumentar tus Ventas?</h3>
@@ -30,6 +27,8 @@
           <h3>¿Quieres Aumentar tu Rentabilidad?</h3>
           <% elsif @contact.con_boton_sitio.include? "quienes somos" %>
             <h3>¿Quieres Aumentar tu Rentabilidad?</h3>
+              <% elsif @contact.con_boton_sitio.include? "Blog" %>
+                <h3>¿Quieres Aumentar tu Rentabilidad?</h3>
 
         <% end %>
 
@@ -39,14 +38,10 @@
 
         <ul class="errors"></ul>
 
-        <% if @contact.con_boton_sitio.include? "redes" %>
-          <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
-          <% elsif @contact.con_boton_sitio.include? "menu" %>
-            <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
-            <% elsif @contact.con_boton_sitio.include? "quienes" %>
-              <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
-        <% else %>
+        <% if @contact.con_boton_sitio.include? "Blog" %>
           <h4 class="modal-header-h4">¡Anótate Gratis y te enviaremos<br/>Información útil para tu Pyme!</h4>
+        <% else %>
+          <h4 class="modal-header-h4">¡Déjanos tu email <br/>Nos Contactaremos hoy mismo!</h4>
         <% end %>
 
         <% @clave = Time.now.year.to_s + Time.now.month.to_s + rand(10000..99999).to_s %>
@@ -60,11 +55,11 @@
 
           <% if @contact.con_boton_sitio.include? "redes" %>
             <div class="field">
-              <%= f.text_area :con_obs, :placeholder => "Dejenos su Comentario...", :class=>"form-control" %>
+              <%= f.text_area :con_obs, :placeholder => "Déjenos su Comentario...", :class=>"form-control" %>
             </div>
           <% else %>
             <div class="field hide">
-              <%= f.text_area :con_obs, :placeholder => "Dejenos su Comentario...", :class=>"form-control" %>
+              <%= f.text_area :con_obs, :placeholder => "Déjenos su Comentario...", :class=>"form-control" %>
             </div>
           <% end %>
 

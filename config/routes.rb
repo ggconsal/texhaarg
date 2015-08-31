@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :texto_vineta
+
+  resources :textos
+
+  resources :post_rels
+
+  resources :post_links
+
+  resources :posts
+
   get 'sessions/new'
 
   get 'contacts/quienes'
@@ -9,6 +19,7 @@ Rails.application.routes.draw do
   get 'contacts/ventas1'
   get 'contacts/mail_confirmation'
   get 'contacts/mail_explanation'
+  get 'contacts/post_mock'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

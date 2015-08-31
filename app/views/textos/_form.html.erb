@@ -1,0 +1,33 @@
+<%= form_for(@texto) do |f| %>
+  <% if @texto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@texto.errors.count, "error") %> prohibited this texto from being saved:</h2>
+
+      <ul>
+      <% @texto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tex_titulo %><br>
+    <%= f.text_field :tex_titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :tex_texto %><br>
+    <%= f.text_area :tex_texto %>
+  </div>
+  <div class="field">
+    <%= f.label :post_id %><br>
+    <%= f.text_field :post_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tex_imagen_tmp %><br>
+    <%= f.text_field :tex_imagen_tmp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,67 @@
+	<div  id="div-blog" class="col-xs-11 post-full">
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-titulo">
+			<h1>Ventas: Como transmitir confianza al comprador</h1>
+		</div>
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-intro">
+			<h4>Incluimos recomendaciones útiles sobre uno de los temas más importantes en el comercio electrónico: ¿Como Generar en los compradores confianza sobre tu sitio, para que realicen la primera venta? A diferencia de un comercio tradicional ...</h4>
+		</div>
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-intro">
+
+			<div class="col-xs-11 col-md-8 post-foto-ppal">
+				<%= link_to image_tag("trans-conf.jpg", class: "img-responsive borde-redondo"), new_contact_path(:motivo => "Blog - Post - Imagenes"), remote: true %>
+			</div>
+
+			<div class="col-xs-11 col-md-4 post-indice">
+				<h2>Indice</h2>
+				<ul>
+					<li>
+						<h4>Item 1</h4>
+					</li>
+					<li>
+						<h4>Item 2</h4>
+					</li>
+					<li>
+						<h4>Item 3</h4>
+					</li>
+					<li>
+						<h4>Item 4</h4>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-sub-titulo">
+			<h3>Sub-Titulo 1 del Post</h3>
+			
+			<% @hola = "trónico: ¿Como <a href="">hola</a> Generar en los <b>compradores</b> confianza sobre tu sitio, para" %>
+
+			<h4> <%= @hola.html_safe %> </h4>
+		</div>
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-sub-titulo">
+			<h3>Sub-Titulo 2 del Post</h3>
+			
+			<% @hola = "trónico: ¿Como <a href="">hola</a> Generar en los <b>compradores</b> confianza sobre tu sitio, paratrónico: ¿Como <a href="">hola</a> Generar en los <b>compradores</b> confianza sobre tu Es muy importante que el sitio contenga espacios donde el cliente pueda comunicarse con nosotros.
+
+    ¿Por qué? Porque, a diferencia de una tienda física, en un sitio de ecommerce nuestro cliente es atendido personalmente por un vendedor. Esto lo hace sentir seguro y confiado en nuestra marca.
+
+    Entonces, ¿Qué hago? Afortunadamente, podemos lograr una sensación de seguridad similar desde nuestra tienda online si somos rápidos para contestar los pedidos o consultas de nuestros clientes. Debemos lograr que cuando llega un email con un pedido, no tardemos más de 15 minutos en responderlo.
+
+Además, se puede agregar un chat dentro de tu tienda virtual para que los visitantes puedan realizar consultas desde el mismo sitio web o bien agregar un botón de Skype para que nuestro cliente realice una llamada desde su computadora." %>
+
+			<h4> <%= @hola.html_safe %> </h4>
+		</div>
+
+		<div class="col-md-offset-1 col-xs-12 col-md-10 post-sub-titulo">
+			<h3>Sub-Titulo 3 del Post</h3>
+			
+			<% @hola = "trónico: ¿Como <a href="">hola</a> Generar <u>en</u> los <b>compradores</b> confianza sobre tu sitio, para" %>
+
+			<h4> <%== @hola %> </h4>
+		</div>
+
+	</div>

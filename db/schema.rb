@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150615192007) do
+ActiveRecord::Schema.define(version: 20150707180516) do
 
   create_table "areas", force: :cascade do |t|
     t.string   "are_titulo", limit: 255
@@ -60,6 +60,37 @@ ActiveRecord::Schema.define(version: 20150615192007) do
 
   add_index "options", ["area_id"], name: "index_options_on_area_id", using: :btree
 
+  create_table "post_links", force: :cascade do |t|
+    t.string   "pli_titulo", limit: 255
+    t.string   "pli_url",    limit: 255
+    t.text     "pli_desc",   limit: 65535
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "post_links", ["post_id"], name: "index_post_links_on_post_id", using: :btree
+
+  create_table "post_rels", force: :cascade do |t|
+    t.string   "pre_titulo", limit: 255
+    t.string   "pli_url",    limit: 255
+    t.text     "pli_desc",   limit: 65535
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "post_rels", ["post_id"], name: "index_post_rels_on_post_id", using: :btree
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "pos_titulo",     limit: 255
+    t.text     "pos_intro",      limit: 65535
+    t.text     "pos_conclusion", limit: 65535
+    t.string   "pos_imagen_tmp", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "profile_options", force: :cascade do |t|
     t.integer  "profile_id", limit: 4
     t.integer  "option_id",  limit: 4
@@ -78,10 +109,34 @@ ActiveRecord::Schema.define(version: 20150615192007) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "texto_vineta", force: :cascade do |t|
+    t.text     "tve_texto",  limit: 65535
+    t.integer  "texto_id",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "texto_vineta", ["texto_id"], name: "index_texto_vineta_on_texto_id", using: :btree
+
+  create_table "textos", force: :cascade do |t|
+    t.string   "tex_titulo",     limit: 255
+    t.text     "tex_texto",      limit: 65535
+    t.integer  "post_id",        limit: 4
+    t.string   "tex_imagen_tmp", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "textos", ["post_id"], name: "index_textos_on_post_id", using: :btree
+
   add_foreign_key "contacts", "canalingresos"
   add_foreign_key "contacts", "options"
   add_foreign_key "contacts", "profiles"
   add_foreign_key "options", "areas"
+  add_foreign_key "post_links", "posts"
+  add_foreign_key "post_rels", "posts"
   add_foreign_key "profile_options", "options"
   add_foreign_key "profile_options", "profiles"
+  add_foreign_key "texto_vineta", "textos"
+  add_foreign_key "textos", "posts"
 end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tex titulo:</strong>
+  <%= @texto.tex_titulo %>
+</p>
+
+<p>
+  <strong>Tex texto:</strong>
+  <%= @texto.tex_texto %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @texto.post %>
+</p>
+
+<p>
+  <strong>Tex imagen tmp:</strong>
+  <%= @texto.tex_imagen_tmp %>
+</p>
+
+<%= link_to 'Edit', edit_texto_path(@texto) %> |
+<%= link_to 'Back', textos_path %>

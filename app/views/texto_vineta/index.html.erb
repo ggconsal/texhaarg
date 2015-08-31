@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Texto Vineta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tve texto</th>
+      <th>Texto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @texto_vineta.each do |texto_vinetum| %>
+      <tr>
+        <td><%= texto_vinetum.tve_texto %></td>
+        <td><%= texto_vinetum.texto %></td>
+        <td><%= link_to 'Show', texto_vinetum %></td>
+        <td><%= link_to 'Edit', edit_texto_vinetum_path(texto_vinetum) %></td>
+        <td><%= link_to 'Destroy', texto_vinetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Texto vinetum', new_texto_vinetum_path %>

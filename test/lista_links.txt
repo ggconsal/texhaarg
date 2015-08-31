@@ -1,0 +1,35 @@
+txaVentas - Cafe
+txaShop - Mas Información
+txaShop - Cafe
+txaShop - Llamenme
+txaShop - Cafe2
+txaShop - Explicame
+txaShop - Cafe3
+txaShop - Mas Información2
+txaVision - Cafe
+txaVision - Cafe2
+txaVision - Llamar
+txaVision - Expliquenme
+txaVision - Llamar2
+txaVision - Cafe3
+txaVision - Más Informacion
+menu - ventas
+-----------------------------------------
+txaCostos - reduccion
+txaCostos - unificada
+txaCostos - cafe
+menu - costos
+-----------------------------------------
+quienes somos
+Quienes somos - Experiencia
+redes
+-----------------------------------------
+Blog - transmitir
+Blog - imagenes
+Blog - Tienda
+Blog - promociones
+Blog - productos
+Blog - indicadores
+Blog - mas-articulos
+Blog - Post
+
